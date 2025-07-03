@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form Builder</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f0fff0;
+    }
+    .question {
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Create Survey Questions</h2>
+  <div id="questionContainer"></div>
+  <button onclick="addQuestion()">Add Question</button>
+
+  <script>
+    function addQuestion() {
+      const container = document.getElementById("questionContainer");
+      const input = document.createElement("input");
+      input.className = "question";
+      input.placeholder = "Enter your question here";
+      container.appendChild(input);
+      container.appendChild(document.createElement("br"));
+    }
+  </script>
+</body>
+</html>
