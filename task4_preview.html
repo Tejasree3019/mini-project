@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Preview</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff0f5;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+    .preview {
+      margin-top: 20px;
+      padding: 10px;
+      background: #eee;
+      border: 1px dashed #aaa;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background: #6a1b9a;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Live Preview</h2>
+  <textarea id="questionInput" placeholder="Type your question here..." oninput="updatePreview()"></textarea>
+  <div class="preview" id="previewBox">Your question preview will appear here</div>
+  <button onclick="window.location.href='task5_dashboard.html'">View Analytics</button>
+
+  <script>
+    function updatePreview() {
+      const text = document.getElementById("questionInput").value;
+      document.getElementById("previewBox").textContent = text || "Your question preview will appear here";
+    }
+  </script>
+</body>
+</html>
